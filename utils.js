@@ -1,3 +1,4 @@
+
 export function createAccount(_user, _accounts) {
     const userExists = isUserExists(_user, _accounts);
 

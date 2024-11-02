@@ -1,20 +1,36 @@
 import { user1, user2 } from "./data.js";
+import CreateAccountPage from "./pages/CreateAccountPage.js";
+import ShowUsersPage from "./pages/ShowUsersPage.js";
 import { createAccount } from "./utils.js";
-
-const accounts = [];
-
+import PromptSync from "prompt-sync";
 
 
-const result = createAccount(user2, accounts);
-console.log(result.message);
+const prompt = PromptSync({sigint: true});
 
-const result2 = createAccount(user2, accounts);
-console.log(result2.message);
+do {
+    console.clear();
+    console.log(':: BANKING MANAGEMENT SYSTEM ::');
+    console.log(':: MENU::');
+    console.log();
 
-const result3 = createAccount(user1, accounts);
-console.log(result3.message);
+    console.log('1. Create Account');
+    console.log('2. Show Users');
+    console.log();
+    console.log();
+    const option = Number(prompt('>> '));
 
-const result4 = createAccount(user1, accounts);
-console.log(result4.message);
+    switch (option) {
+        case 1:
+            CreateAccountPage();
+            break;
+        case 2:
+            ShowUsersPage();
+        default:
+            break;
+    }
+    
+  
+} while(true);
 
-console.log('Database: ', accounts);
+
+// console.log('Database: ', accounts);
