@@ -1,5 +1,5 @@
 import PromptSync from "prompt-sync";
-import { accounts } from "../database.js";
+import { users } from "../database.js";
 
 function ShowUsersPage() {
     const prompt = PromptSync({sigint: true});
@@ -9,7 +9,7 @@ function ShowUsersPage() {
     console.log(':: MENU::');
     console.log();
 
-    console.log(accounts);
+    console.log(users);
 
     prompt('Press Enter To Continue ..');
 }

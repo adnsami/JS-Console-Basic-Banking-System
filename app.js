@@ -1,5 +1,6 @@
 import { user1, user2 } from "./data.js";
 import CreateAccountPage from "./pages/CreateAccountPage.js";
+import DeleteAccountPage from "./pages/DeleteAccountPage.js";
 import ShowUsersPage from "./pages/ShowUsersPage.js";
 import { createAccount } from "./utils.js";
 import PromptSync from "prompt-sync";
@@ -15,6 +16,7 @@ do {
 
     console.log('1. Create Account');
     console.log('2. Show Users');
+    console.log('3. Delete User');
     console.log();
     console.log();
     const option = Number(prompt('>> '));
@@ -25,6 +27,9 @@ do {
             break;
         case 2:
             ShowUsersPage();
+            break;
+        case 3:
+            DeleteAccountPage();
         default:
             break;
     }
@@ -33,4 +38,4 @@ do {
 } while(true);
 
 
-// console.log('Database: ', accounts);
+// console.log('Database: ', users);

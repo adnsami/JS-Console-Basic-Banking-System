@@ -1,11 +1,11 @@
 import PromptSync from "prompt-sync";
-import { accounts } from "../database.js";
+import { users } from "../database.js";
 import { createAccount } from "../utils.js";
 
 function CreateAccountPage() {
     console.clear();
     console.log(':: BANKING MANAGEMENT SYSTEM ::');
-    console.log(':: MENU::');
+    console.log(':: MENU::');``
     console.log();
     
     const prompt = PromptSync({sigint: true});
@@ -17,7 +17,7 @@ function CreateAccountPage() {
     const email = prompt('Email: ');
     
     const user = {
-        id: accounts.length + 1,
+        id: users.length + 1,
         firstName,
         lastName,
         username,
@@ -26,7 +26,7 @@ function CreateAccountPage() {
         created_at: new Date(),
     }
 
-    const result = createAccount(user, accounts);
+    const result = createAccount(user, users);
     console.log(result.message);
 
     prompt('Press Enter To Continue ..');

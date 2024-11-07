@@ -1,1 +1,1 @@
-export const accounts = [];
+export const users = [];
