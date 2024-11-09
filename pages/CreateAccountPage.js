@@ -23,8 +23,11 @@ function CreateAccountPage() {
         username,
         password,
         email,
+        balance: 0,
+        transactions: [] ,
         created_at: new Date(),
     }
+
 
     const result = createAccount(user, users);
     console.log(result.message);
