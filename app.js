@@ -1,4 +1,3 @@
-import { user1, user2 } from "./data.js";
 import CreateAccountPage from "./pages/CreateAccountPage.js";
 import DeleteAccountPage from "./pages/DeleteAccountPage.js";
 import DepositPage from "./pages/DepositPage.js";
